@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videogames",
+  "info": {
+    "singularName": "videogame",
+    "pluralName": "videogames",
+    "displayName": "videogame",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "required": true,
+      "type": "decimal"
+    },
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "Xbox Series X",
+        "Playstation 5",
+        "Nintendo Switch"
+      ],
+      "required": true
+    },
+    "soldOut": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
